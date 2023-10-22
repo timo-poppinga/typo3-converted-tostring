@@ -1,0 +1,28 @@
+<html
+        xmlns:z3-statistics="http://typo3.org/ns/Z3/Statistics/ViewHelpers"
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+        xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+        data-namespace-typo3-fluid="true"
+>
+
+
+
+<f:layout name="Module" />
+
+<f:section name="Content">
+
+    <f:be.pageRenderer
+            includeJavaScriptModules="{
+            0: '@typo3/backend/modal.js',
+            1: '@typo3/backend/context-menu.js'
+        }"
+    />
+
+    <f:debug>{data}</f:debug>
+    <h1>
+        <z3-statistics:renderHello data="{data}" />
+    </h1>
+
+
+</f:section>

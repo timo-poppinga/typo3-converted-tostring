@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Z3\Statistics\:
+    resource: '../Classes/*'
+
+  Z3\Statistics\Command\BuildJsonDataCommand:
+    tags:
+      - name: 'console.command'
+        command: 'calculation:save:projects'
+

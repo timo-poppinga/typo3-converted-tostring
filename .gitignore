@@ -1,0 +1,53 @@
+########################
+# global ignore file
+########################
+
+#
+# Ignore temporary files (left by editors and OS)
+.DS_Store
+
+#
+# Ignore by common IDEs used directories/files
+*.idea
+
+#
+# Temporary files and folders
+.php_cs.cache
+.phpunit.result.cache
+/artifacts
+/temporary
+
+#
+# Ignore build stuff
+/packages/site-package/Resources/Public/StyleSheets/main.css
+
+#
+# Ignore composer stuff
+/bin
+/vendor
+
+#
+# Ignore common TYPO3 CMS files/directories
+/var
+
+#
+# Add specific TYPO3 CMS files/directories
+/public/*
+!/public/.htaccess
+
+/config/*
+!/config/sites
+/config/sites/*
+
+!/config/sites/main
+/config/sites/main/*
+!/config/sites/main/config.yaml
+
+!/config/system
+/config/system/*
+!/config/system/additional.php
+
+#
+# Ignore specific builder files/directories
+DeployerPath.yaml
+/*.sql

@@ -1,0 +1,44 @@
+{
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/*"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.org/"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.z3.rocks/"
+    }
+  ],
+  "name": "z3/p1473-z3-calculation",
+  "description": "zdreicom Calculation",
+  "license": "proprietary",
+  "type": "typo3-cms",
+  "require": {
+    "php": "^8.2.8",
+    "z3/base-site-package-12": "dev-master",
+    "z3/statistics": "1.0.0"
+  },
+  "config": {
+    "bin-dir": "bin",
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
+  },
+  "scripts": {
+    "extension-setup-if-possible": [
+      "@php bin/typo3 install:extensionsetupifpossible"
+    ],
+    "fix-folder-structure": [
+      "@php bin/typo3 install:fixfolderstructure"
+    ],
+    "post-autoload-dump": [
+      "@extension-setup-if-possible",
+      "@fix-folder-structure"
+    ]
+  }
+}
